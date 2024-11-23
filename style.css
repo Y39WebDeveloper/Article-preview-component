@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500.700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ECF2F8;
+}
+button{
+    all: unset;
+}
+.article{
+    width: 730px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    background-color: #fff;
+}
+.article > img{
+    width: 285px;
+    height: 280px;
+}
+.article .content{
+    padding: 32px 40px;
+    height: 100%;
+}
+.article .content h4{
+    color: #48556A;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: .25px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.article .content > p{
+    color: #6E8098;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: .12px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.article .content .profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.article .content .profile .name{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.article .content .profile .name img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.article .content .profile .name p{
+    color: #48556A;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: .12px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-weight: 700;
+}
+.article .content .profile .name p span{
+    color: #9DAEC2;
+    font-weight: 500;
+}
+.article .content .profile .share{
+    position: relative;
+}
+.article .content .profile .share button{
+    background-color: #ECF2F8;
+    display: block;
+    width: 15px;
+    height: 13px;
+    padding: 9px 8px 10px 9px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.article .content .profile .share.active button,
+.article .content .profile .share button:hover{
+    background-color: #6E8098;
+}
+.article .content .profile .share button svg path{transition: .3s;}
+.article .content .profile .share.active button svg path,
+.article .content .profile .share button:hover svg path{
+    fill: #fff;
+}
+.article .content .profile .share .box{
+    width: 248px;
+    height: 55px;
+    background-color: #48556A;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+    border-radius: 10px;
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+.article .content .profile .share.active .box{
+    display: flex;
+}
+
+.box::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border: 12px solid #48556A;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+.article .content .profile .share .box > p{
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #9DAEC2;
+}
+.article .content .profile .share .box > ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.article .content .profile .share .box > ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.article .content .profile .share .box > ul li a img{
+    width: 20px;
+}
+@media (max-width: 768px) {
+    .article{
+        flex-direction: column;
+        width: 327px;
+        height: fit-content;
+        overflow: hidden;
+    }
+    .article > img{
+        width: 327px;
+        height: 200px;
+    }
+    .article .content{
+        padding: 36px 32px 20px 32px;
+        position: relative;
+    }
+    .article .content > p{
+        margin-bottom: 32px;
+    }
+    .article .content .profile .share{
+        position: unset;
+    }
+    .article .content .profile .share button{
+        background-color: #ECF2F8;
+        display: block;
+        width: 15px;
+        height: 13px;
+        padding: 9px 8px 10px 9px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .article .content .profile .share .box{
+        width: 327px;
+        height: 64px;
+        gap: 21px;
+        padding: auto 32px;
+        position: absolute;
+        top: unset;
+        bottom: 0px;
+        left: 0px;
+        transform: translate(0, 0);
+        border-radius: 0;
+    }
+    
+    .box::after {
+        position: absolute;
+        content: "";
+        all: unset;
+    }
+    .article .content .profile .share .box{
+        justify-content: flex-start;
+        padding: 0 32px;
+    }
+    .article .content .profile .share.active button{
+        bottom: -8px;
+        position: relative;
+    }
+}

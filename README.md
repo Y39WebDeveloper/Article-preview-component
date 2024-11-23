@@ -1,5 +1,5 @@
 # Frontend Mentor - Article preview component
-
+live preview : https://y39webdeveloper.github.io/Article-preview-component/
 ![Design preview for the Article preview component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
